@@ -1,0 +1,106 @@
+{
+  "placeholderImages": [
+    {
+      "id": "private_media_vault",
+      "description": "Securely hide and encrypt photos/videos",
+      "imageUrl": "https://i.postimg.cc/6Q6JkFBZ/Picsart-26-05-28-01-24-06-478.jpg",
+      "imageHint": "security vault"
+    },
+    {
+      "id": "whatsapp_status_saver",
+      "description": "Save photos & videos from WhatsApp",
+      "imageUrl": "https://i.postimg.cc/tJSBrTBd/Picsart-26-05-27-13-53-15-241.jpg",
+      "imageHint": "mobile message"
+    },
+    {
+      "id": "all_file_conversion_tools",
+      "description": "Convert files between multiple formats",
+      "imageUrl": "https://i.postimg.cc/PJnYzCGN/file-000000009c88720684ba1cc94cee3d0a.png",
+      "imageHint": "file conversion"
+    },
+    {
+      "id": "all_image_tools",
+      "description": "Access all image editing tools",
+      "imageUrl": "https://i.postimg.cc/65YzwhJ0/file-000000003904720999df914a30fd482e.png",
+      "imageHint": "image design"
+    },
+    {
+      "id": "age_calculation",
+      "description": "Calculate exact age from date of birth",
+      "imageUrl": "https://i.postimg.cc/8cg3m6RV/IMG-20250618-WA0072.jpg",
+      "imageHint": "age calculator"
+    },
+    {
+      "id": "all_PDF_Tools",
+      "description": "ALL PDF edit, compress, merge tools",
+      "imageUrl": "https://i.postimg.cc/jj0pmJwt/file-000000005d987208a105f0dc868c24a9.png",
+      "imageHint": "pdf tools"
+    },
+    {
+      "id": "all_video_tools",
+      "description": "Explore all video tools",
+      "imageUrl": "https://i.postimg.cc/Zq1V2KkM/file-000000008db07206a43a7d513faee56c.png",
+      "imageHint": "video editor"
+    },
+    {
+      "id": "all_ai_writer_tools",
+      "description": "Generate content using AI writing tools",
+      "imageUrl": "https://i.postimg.cc/Wp0HRr4T/file-00000000d3e47206adde16937bd9c0f6.png",
+      "imageHint": "ai writing"
+    },
+    {
+      "id": "ringtone_maker",
+      "description": "Create Custom Name Caller Ringtones",
+      "imageUrl": "https://i.postimg.cc/YSzSLcVF/IMG-20250617-WA0088.jpg",
+      "imageHint": "music audio"
+    },
+    {
+      "id": "play_games",
+      "description": "Play free online games in browser",
+      "imageUrl": "https://i.postimg.cc/yNM0Jb3w/10-Best-Poki-Games-2023.jpg",
+      "imageHint": "video games"
+    },
+    {
+      "id": "maths_solver",
+      "description": "Solve math problems step by step",
+      "imageUrl": "https://i.postimg.cc/5twhggTN/256x256bb.jpg",
+      "imageHint": "math education"
+    },
+    {
+      "id": "img_bg_remover",
+      "description": "Remove image background automatically",
+      "imageUrl": "https://i.postimg.cc/1RLRbCH9/images-11.jpg",
+      "imageHint": "background remover"
+    },
+    {
+      "id": "student_image",
+      "description": "Generate demo student ID cards",
+      "imageUrl": "https://i.postimg.cc/DydrDq85/demo2.jpg",
+      "imageHint": "id card"
+    },
+    {
+      "id": "mobile_comparison",
+      "description": "Compare mobile specs and prices",
+      "imageUrl": "https://i.postimg.cc/ncFvRQFv/IMG-20250624-WA0012.jpg",
+      "imageHint": "mobile phone"
+    },
+    {
+      "id": "github_maker",
+      "description": "Create Visiting Card designs",
+      "imageUrl": "https://i.postimg.cc/D0cCQYfq/IMG-20250618-WA0095.jpg",
+      "imageHint": "business card"
+    },
+    {
+      "id": "enhance_image",
+      "description": "Enhance low quality photos into HD",
+      "imageUrl": "https://i.postimg.cc/rmnCJT57/images-10.jpg",
+      "imageHint": "image enhancement"
+    },
+    {
+      "id": "app_showcase_dual",
+      "description": "Dual device app features showcase",
+      "imageUrl": "https://i.postimg.cc/C51bs5sM/01-two-devices.png",
+      "imageHint": "app showcase"
+    }
+  ]
+}

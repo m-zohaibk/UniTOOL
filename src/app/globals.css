@@ -1,0 +1,60 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 232 18% 7%;
+    --foreground: 0 0% 98%;
+    --card: 232 18% 10%;
+    --card-foreground: 0 0% 98%;
+    --popover: 232 18% 7%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 248 100% 74%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 232 18% 15%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 232 18% 15%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 206 99% 65%;
+    --accent-foreground: 232 18% 7%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 232 18% 20%;
+    --input: 232 18% 20%;
+    --ring: 248 100% 74%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-auto-rows: 200px;
+  gap: 1.5rem;
+}
+
+.bento-item-large {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+  .bento-item-large {
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+}
