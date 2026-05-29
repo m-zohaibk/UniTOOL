@@ -1,0 +1,27 @@
+
+# UniTool - All-in-One Professional Utility App
+
+UniTool is a comprehensive suite of 40+ professional-grade utilities for Android, focusing on media management, security, and document processing.
+
+## Core Capabilities
+
+- **Private Media Vault**: Military-grade AES-256 encryption for securely hiding photos and videos. Everything is processed and stored locally on the device.
+- **WhatsApp Status Saver**: Save and share photos or videos from WhatsApp statuses. Uses local storage access without cloud uploads.
+- **Universal File Conversion**: Convert between Audio, Video, PDF, and Image formats (100+ supported formats).
+- **AI-Powered Tools**: Intelligent background removal, image upscaling (HD enhancement), and AI writing assistants.
+- **PDF Suite**: Complete toolkit for merging, splitting, compressing, and editing PDF documents.
+- **Education & Utility**: Step-by-step math solvers, age calculators, mobile comparisons, and student ID generators.
+
+## Principles
+
+- **Privacy First**: Offline-first architecture. Media processing occurs on-device.
+- **Security**: AES-256 encryption for the media vault.
+- **Speed**: Quantized local AI models for smart tool discovery.
+
+## Important Links
+
+- [Homepage](https://unitool.qzz.io)
+- [Privacy Policy](https://unitool.qzz.io/privacy)
+- [Terms of Service](https://unitool.qzz.io/terms)
+- [Account Deletion](https://unitool.qzz.io/account-deletion)
+- [Support Email](mailto:zobifast@gmail.com)
