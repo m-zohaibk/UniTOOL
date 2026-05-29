@@ -1,4 +1,3 @@
-
 // Deprecated: Moved to public/app-ads.txt
 export const runtime = 'edge';
 export async function GET() {
