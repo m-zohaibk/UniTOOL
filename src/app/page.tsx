@@ -1,4 +1,3 @@
-
 import { DiscoveryTool } from "@/components/ai/DiscoveryTool";
 import { FeatureGrid } from "@/components/sections/FeatureGrid";
 import { PrivacyShowcase } from "@/components/sections/PrivacyShowcase";
