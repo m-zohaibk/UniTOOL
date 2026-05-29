@@ -44,7 +44,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = {
+  const softwareSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "UniTool",
@@ -63,6 +63,17 @@ export default function RootLayout({
     "description": "The most comprehensive set of professional tools for media, security, and document management."
   };
 
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "UniTool Labs",
+    "url": baseUrl,
+    "logo": "https://unitool.qzz.io/favicon.ico",
+    "sameAs": [
+      "https://github.com/unitool-labs"
+    ]
+  };
+
   return (
     <html lang="en" className="dark">
       <head>
@@ -71,7 +82,11 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
       <body className="font-body antialiased min-h-screen bg-background text-foreground">

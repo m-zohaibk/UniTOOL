@@ -60,7 +60,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-primary/10 blur-[120px] rounded-full -z-10 group-hover:bg-primary/20 transition-colors" />
                 <Image 
                   src={showcaseImage.imageUrl} 
-                  alt="UniTool App Interface Showcase - Multi-device view"
+                  alt="UniTool App Interface Showcase - Multi-device view showing encryption vault and media tools"
                   width={1200}
                   height={800}
                   className="w-full h-auto drop-shadow-2xl rounded-[2.5rem] border border-border/50 bg-card/30 backdrop-blur-sm p-2 transition-transform duration-700 hover:scale-[1.01]"
@@ -81,9 +81,14 @@ export default function Home() {
               <h2 className="text-4xl font-headline font-bold leading-tight">
                 Why Professional Users <br /> Choose <span className="text-primary">UniTool Utilities</span>
               </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Unlike generic tool apps that sacrifice quality for quantity, UniTool focuses on high-performance, offline-first processing. Our suite is designed for users who demand privacy without compromising on capability.
-              </p>
+              <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  Unlike generic tool apps that sacrifice quality for quantity, UniTool focuses on high-performance, offline-first processing. Our suite is designed for power users, developers, and security-conscious individuals who demand full control over their digital assets.
+                </p>
+                <p>
+                  With the rise of cloud-dependent services, UniTool stands apart by offering robust, local-only processing. Whether you are encrypting sensitive documents in our AES-256 vault or converting complex file formats, your data never leaves your device's secure environment.
+                </p>
+              </div>
               <ul className="space-y-4">
                 {[
                   "Military-grade AES-256 encryption for all vault media",
@@ -104,24 +109,24 @@ export default function Home() {
                 <div className="p-8 bg-secondary rounded-[2rem] border border-border/50 space-y-4">
                   <Zap className="h-8 w-8 text-accent" />
                   <h3 className="text-xl font-headline font-bold">Fast Processing</h3>
-                  <p className="text-sm text-muted-foreground">Local CPU-based processing for near-instant results.</p>
+                  <p className="text-sm text-muted-foreground">Local CPU-based processing for near-instant results without network latency.</p>
                 </div>
                 <div className="p-8 bg-primary/10 rounded-[2rem] border border-primary/20 space-y-4">
                   <Shield className="h-8 w-8 text-primary" />
                   <h3 className="text-xl font-headline font-bold">Secure Vault</h3>
-                  <p className="text-sm text-muted-foreground">Encrypted storage that never touches the cloud.</p>
+                  <p className="text-sm text-muted-foreground">Encrypted storage that leverages on-device hardware security modules.</p>
                 </div>
               </div>
               <div className="space-y-4">
                 <div className="p-8 bg-accent/10 rounded-[2rem] border border-accent/20 space-y-4">
                   <Download className="h-8 w-8 text-accent" />
                   <h3 className="text-xl font-headline font-bold">Universal</h3>
-                  <p className="text-sm text-muted-foreground">Support for all major file types and media formats.</p>
+                  <p className="text-sm text-muted-foreground">Support for 100+ major file types and media formats for seamless workflow.</p>
                 </div>
                 <div className="p-8 bg-secondary rounded-[2rem] border border-border/50 space-y-4">
                   <Layout className="h-8 w-8 text-primary" />
                   <h3 className="text-xl font-headline font-bold">Smart Discovery</h3>
-                  <p className="text-sm text-muted-foreground">AI-driven search to find the right tool in seconds.</p>
+                  <p className="text-sm text-muted-foreground">AI-driven search to find the right utility in seconds from our 40+ module list.</p>
                 </div>
               </div>
             </div>
