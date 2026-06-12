@@ -1,10 +1,14 @@
-import { Layout, ArrowLeft, Shield } from "lucide-react";
+import { Layout, ArrowLeft, Shield, Mail, Globe, Lock, Info, AlertTriangle, Eye } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
 export default function PrivacyPage() {
+  const lastUpdated = "June 12, 2026";
+  const contactEmail = "zobifast@gmail.com";
+
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-background">
       <header className="border-b border-border/50 bg-background/80 backdrop-blur-xl sticky top-0 z-50">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 group">
@@ -14,92 +18,143 @@ export default function PrivacyPage() {
         </div>
       </header>
 
-      <main className="flex-1 py-20 px-4">
-        <div className="max-w-3xl mx-auto space-y-12">
-          <div className="space-y-4">
-            <div className="flex items-center gap-3 text-primary">
-              <Shield className="h-8 w-8" />
-              <h1 className="text-4xl font-headline font-bold">Privacy Policy</h1>
+      <main className="flex-1 py-16 px-4">
+        <div className="max-w-4xl mx-auto space-y-12">
+          {/* Hero Header */}
+          <div className="space-y-4 text-center md:text-left">
+            <div className="flex items-center gap-3 text-primary justify-center md:justify-start">
+              <div className="p-3 bg-primary/10 rounded-2xl">
+                <Shield className="h-8 w-8" />
+              </div>
+              <div>
+                <h1 className="text-4xl md:text-5xl font-headline font-bold text-foreground">Privacy Policy</h1>
+                <p className="text-muted-foreground mt-1">Last Updated: {lastUpdated}</p>
+              </div>
             </div>
-            <p className="text-muted-foreground italic">Last Updated: May 28, 2026</p>
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl">
+              UniTool (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) operates the UniTool mobile application (&quot;App&quot;). This Privacy Policy explains how information may be collected, used, and disclosed when you use our App.
+            </p>
           </div>
 
-          <article className="prose prose-invert max-w-none text-muted-foreground space-y-8 leading-relaxed">
+          <div className="space-y-8">
             <section className="space-y-4">
-              <h2 className="text-2xl font-headline font-semibold text-foreground">Introduction</h2>
-              <p>
-                At UniTool, accessible through the Google Play Store, protecting user privacy is one of our top priorities. This Privacy Policy explains what information may be collected, how it is used, and how your data remains protected.
+              <div className="flex items-center gap-2 text-foreground font-headline font-bold text-2xl">
+                <Info className="h-6 w-6 text-primary" />
+                <h2>1. INFORMATION WE COLLECT</h2>
+              </div>
+              <Card className="bg-card/50 border-border/50">
+                <CardContent className="p-6 space-y-4">
+                  <p className="text-muted-foreground leading-relaxed">
+                    UniTool does not collect, store, or sell your personal files, photos, videos, or documents.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    To provide app features, UniTool may request access to:
+                  </p>
+                  <ul className="grid gap-4 md:grid-cols-2">
+                    <li className="p-4 bg-secondary/30 rounded-xl border border-border/50">
+                      <strong className="text-foreground block mb-1">Storage/Photos/Videos</strong>
+                      <span className="text-sm">On devices running Android 9 (API 28) and below, UniTool may request storage permissions to access, save, edit, convert, organize, and manage files and media selected by you. On newer Android versions, file access may be provided through Android&apos;s built-in file and media selection system.</span>
+                    </li>
+                  </ul>
+                  <p className="text-muted-foreground leading-relaxed pt-2">
+                    Some information may be collected automatically by third-party services used within the App, including:
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {["Device information", "Crash reports", "Diagnostic information", "Usage statistics", "Performance stats", "Advertising identifiers"].map((item) => (
+                      <span key={item} className="px-3 py-1 bg-primary/5 border border-primary/20 text-primary text-xs font-semibold rounded-full">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </section>
+
+            <section className="space-y-4">
+              <div className="flex items-center gap-2 text-foreground font-headline font-bold text-2xl">
+                <Eye className="h-6 w-6 text-primary" />
+                <h2>2. THIRD-PARTY SERVICES</h2>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                UniTool may use third-party services for advertising, analytics, crash reporting, or other functionality. These services may collect information according to their own privacy policies. Examples include:
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {["Google Play Services", "Google AdMob", "Firebase Analytics", "Firebase Crashlytics"].map((service) => (
+                  <div key={service} className="p-4 bg-card border border-border/50 rounded-xl text-center text-sm font-medium">
+                    {service}
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <div className="flex items-center gap-2 text-foreground font-headline font-bold text-2xl">
+                <Lock className="h-6 w-6 text-primary" />
+                <h2>3. FILES AND MEDIA</h2>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                UniTool only accesses files, photos, videos, and documents when required for a feature that you choose to use. We do not claim ownership of your content.
+              </p>
+              <div className="p-6 bg-destructive/5 border border-destructive/20 rounded-2xl flex gap-4 items-start text-muted-foreground">
+                <AlertTriangle className="h-6 w-6 text-destructive shrink-0" />
+                <p className="text-sm">
+                  <strong>Disclaimer:</strong> You are responsible for maintaining backups of important files and media. We are not responsible for data loss resulting from device issues, app removal, device resets, storage failures, or other circumstances beyond our control.
+                </p>
+              </div>
+            </section>
+
+            <section className="space-y-4">
+              <div className="flex items-center gap-2 text-foreground font-headline font-bold text-2xl">
+                <Globe className="h-6 w-6 text-primary" />
+                <h2>4. WEB-BASED TOOLS</h2>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                Some UniTool features may open third-party websites, online tools, or services within a WebView or your device&apos;s browser. Any information submitted to or collected by these third-party services is governed by their own privacy policies and terms.
               </p>
             </section>
 
-            <section className="space-y-4">
-              <h2 className="text-2xl font-headline font-semibold text-foreground">Information We Collect</h2>
-              <ul className="space-y-4 list-disc pl-5">
-                <li>
-                  <strong>WhatsApp Status Saver:</strong> For Android versions below 10, the app requires storage permission for compatibility only. For Android 10 and above, no permission is required. UniTool accesses only the folders you manually select using Android&apos;s Storage Access Framework (SAF) to display and save WhatsApp statuses locally on your device. No status files are uploaded to our servers.
-                </li>
-                <li>
-                  <strong>Private Media Vault:</strong> Photos, videos, and files hidden inside the vault are encrypted and stored locally on your device. UniTool does not access or upload vault content to external servers.
-                </li>
-                <li>
-                  <strong>PDF & Image Tools:</strong> File conversion, image editing, and PDF processing tools operate securely inside embedded WebViews. We do not permanently store uploaded files.
-                </li>
-                <li>
-                  <strong>Google Sign-In:</strong> If you choose to sign in with Google, your name, email address, and favorite tools may be stored to synchronize preferences across devices.
-                </li>
-                <li>
-                  <strong>Advertising:</strong> UniTool uses Google AdMob for advertisements. AdMob may collect advertising identifiers, device information, and usage data for ad personalization and analytics.
-                </li>
-                <li>
-                  <strong>Push Notifications:</strong> Firebase Cloud Messaging (FCM) may generate a unique token to deliver notifications and updates.
-                </li>
-              </ul>
-            </section>
+            <div className="grid md:grid-cols-2 gap-8">
+              <section className="space-y-4">
+                <div className="flex items-center gap-2 text-foreground font-headline font-bold text-xl">
+                  <Shield className="h-5 w-5 text-primary" />
+                  <h2>5. DATA SECURITY</h2>
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  We take reasonable measures to help protect information and improve app security. However, no method of electronic storage or transmission is completely secure, and we cannot guarantee absolute security.
+                </p>
+              </section>
 
-            <section className="space-y-4">
-              <h2 className="text-2xl font-headline font-semibold text-foreground">Data Security</h2>
-              <p>
-                We value your trust and work to protect your information. However, no method of transmission over the internet or electronic storage is completely secure, and absolute security cannot be guaranteed.
-              </p>
-            </section>
+              <section className="space-y-4">
+                <div className="flex items-center gap-2 text-foreground font-headline font-bold text-xl">
+                  <Eye className="h-5 w-5 text-primary" />
+                  <h2>6. CHILDREN&apos;S PRIVACY</h2>
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  UniTool is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that such information has been collected, we will take steps to delete it.
+                </p>
+              </section>
+            </div>
 
-            <section className="space-y-4">
-              <h2 className="text-2xl font-headline font-semibold text-foreground">Third-Party Services</h2>
-              <p>
-                UniTool may contain links or integrations with third-party services, websites, or tools. We are not responsible for the privacy practices or content of those external services.
-              </p>
+            <section className="pt-8 border-t border-border/50 flex flex-col md:flex-row items-center justify-between gap-8">
+              <div className="space-y-2 text-center md:text-left">
+                <h3 className="font-headline font-bold text-xl">Contact Us</h3>
+                <p className="text-muted-foreground text-sm">Have questions about your privacy?</p>
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary rounded-xl border border-border mt-2">
+                  <Mail className="h-4 w-4 text-primary" />
+                  <span className="font-mono text-foreground font-bold">{contactEmail}</span>
+                </div>
+              </div>
+              <Button asChild variant="outline" className="rounded-xl px-8 h-12 border-primary/20 text-primary hover:bg-primary/5">
+                <Link href="/">Back to Launchpad</Link>
+              </Button>
             </section>
-
-            <section className="space-y-4">
-              <h2 className="text-2xl font-headline font-semibold text-foreground">Children's Privacy</h2>
-              <p>
-                UniTool does not knowingly collect personally identifiable information from children under the age of 13.
-              </p>
-            </section>
-
-            <section className="space-y-4">
-              <h2 className="text-2xl font-headline font-semibold text-foreground">Changes to This Privacy Policy</h2>
-              <p>
-                We may update this Privacy Policy from time to time. Any updates will be posted on this page with a revised update date.
-              </p>
-            </section>
-
-            <section className="space-y-4">
-              <h2 className="text-2xl font-headline font-semibold text-foreground">Contact Us</h2>
-              <p>
-                If you have questions or suggestions regarding this Privacy Policy, please contact us through the developer email provided on the Google Play Store listing.
-              </p>
-            </section>
-          </article>
-
-          <div className="pt-10 border-t border-border flex flex-col gap-6">
-            <p className="text-sm text-muted-foreground">© 2026 UniTool. All Rights Reserved.</p>
-            <Button asChild variant="outline" className="w-fit rounded-xl border-primary/20 hover:bg-primary/10 text-primary">
-              <Link href="/">Back to Launchpad</Link>
-            </Button>
           </div>
         </div>
       </main>
+
+      <footer className="py-10 border-t border-border/50 text-center">
+        <p className="text-sm text-muted-foreground">© 2026 UniTool Labs. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
