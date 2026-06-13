@@ -7,24 +7,6 @@ import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 
 export function PrivacyShowcase() {
-  const pillars = [
-    {
-      icon: Lock,
-      title: "Strong Security",
-      desc: "We use top-level encryption to keep your files safe. Your keys are kept only on your phone."
-    },
-    {
-      icon: ServerOff,
-      title: "No Servers Needed",
-      desc: "Your files never leave your phone. We don't use cloud storage, so your data stays private."
-    },
-    {
-      icon: EyeOff,
-      title: "Private Tools",
-      desc: "All processing happens in a safe space on your phone. No one else can see what you are doing."
-    }
-  ];
-
   return (
     <section className="py-32 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2 -z-10" />
@@ -36,32 +18,6 @@ export function PrivacyShowcase() {
           <p className="text-xl text-muted-foreground font-medium leading-relaxed">
             UniTool is built to keep your personal files safe. We don't need your data to work.
           </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          {pillars.map((pillar, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-            >
-              <Card className="glass-card group hover:border-primary/40 transition-all duration-500 h-full">
-                <CardContent className="p-10 space-y-8">
-                  <div className="p-5 primary-gradient rounded-3xl w-fit text-white shadow-xl shadow-primary/20 group-hover:scale-110 transition-transform duration-500">
-                    <pillar.icon className="h-8 w-8" />
-                  </div>
-                  <div className="space-y-4">
-                    <h3 className="text-2xl font-headline font-bold">{pillar.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed font-medium">
-                      {pillar.desc}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
         </div>
 
         <div className="glass-card rounded-[3rem] p-12 flex flex-col lg:flex-row items-center gap-16 mt-16 bg-gradient-to-br from-white/[0.03] to-transparent">
