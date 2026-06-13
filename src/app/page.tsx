@@ -61,7 +61,7 @@ export default function Home() {
                 <Shield className="h-3 w-3" />
                 V1.0.0 Stable Release
               </div>
-              <h1 className="text-6xl md:text-[7rem] font-headline font-bold tracking-tighter leading-[0.85] text-gradient">
+              <h1 className="text-5xl md:text-7xl font-headline font-bold tracking-tighter leading-[1.1] text-gradient">
                 One Toolbox. <br />
                 <span className="text-primary">Infinite</span> Potential.
               </h1>
@@ -216,7 +216,7 @@ export default function Home() {
                 </div>
                 <span className="font-headline font-bold text-2xl text-gradient">UniTool</span>
               </div>
-              <p className="text-muted-foreground max-w-sm leading-relaxed text-lg font-medium">
+              <p className="text-muted-foreground max-sm leading-relaxed text-lg font-medium">
                 The ultimate professional toolkit. Built for those who prioritize privacy, performance, and power.
               </p>
               <div className="flex items-center gap-4">
