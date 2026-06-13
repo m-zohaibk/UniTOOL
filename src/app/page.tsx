@@ -47,20 +47,18 @@ export default function Home() {
       </header>
 
       <main className="flex-1 pt-16">
-        <section className="relative pt-20 pb-20 px-6 overflow-hidden">
+        <section className="relative pt-12 pb-20 px-6 overflow-hidden">
           <div className="hero-glow" />
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] bg-primary/5 blur-[120px] rounded-full -z-10" />
-          
           <div className="container mx-auto text-center space-y-12 relative z-10">
             <div className="space-y-6 max-w-4xl mx-auto">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 text-primary text-[10px] font-black border border-primary/20 tracking-[0.2em] uppercase">
-                V1.0 Stable Release
+                V1.0.0 Stable Release
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-headline font-bold tracking-tighter leading-[1.1] text-gradient">
+              <h1 className="text-3xl md:text-4xl font-headline font-bold tracking-tighter leading-tight text-gradient">
                 One Toolbox. <br />
                 <span className="text-primary">Infinite Potential.</span>
               </h1>
-              <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed font-medium">
+              <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed font-medium">
                 The ultimate set of tools for your phone. Fast, safe, and easy for everyone.
               </p>
               
@@ -77,7 +75,6 @@ export default function Home() {
 
             {showcaseImage && (
               <div className="relative mt-12">
-                <div className="absolute inset-0 bg-primary/20 blur-[100px] rounded-full -z-10" />
                 <div className="relative">
                   <Image 
                     src={showcaseImage.imageUrl} 
@@ -88,7 +85,7 @@ export default function Home() {
                     priority
                     data-ai-hint={showcaseImage.imageHint}
                   />
-                  <div className="mt-10 flex justify-center">
+                  <div className="mt-12 flex justify-center">
                     <PlayStoreButton />
                   </div>
                 </div>
@@ -99,16 +96,6 @@ export default function Home() {
 
         <section id="features" className="py-20 container mx-auto px-6">
           <FeatureGrid />
-        </section>
-
-        <section className="py-20 relative bg-secondary/10">
-          <div className="container mx-auto px-6 text-center space-y-10">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-gradient">Simple and Fast</h2>
-            <div className="max-w-2xl mx-auto space-y-6 text-base text-muted-foreground">
-              <p>UniTool is a complete set of tools for your phone. We made it very simple so anyone can use it without help.</p>
-              <p>From saving status videos to editing images, everything happens instantly. Most features don't even need the internet.</p>
-            </div>
-          </div>
         </section>
       </main>
 
