@@ -1,10 +1,12 @@
-
 "use client";
 
 import { Download, Smartphone, Layout, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function DownloadCenter() {
+  const playStoreUrl = "https://play.google.com/store/apps/details?id=com.unitool.ai";
+
   return (
     <section id="download" className="py-24 px-8 relative overflow-hidden bg-secondary/20 rounded-[3rem] mx-4 mb-24 border border-border/50">
       <div className="max-w-4xl mx-auto text-center space-y-12 relative z-10">
@@ -23,9 +25,11 @@ export function DownloadCenter() {
             <Download className="h-6 w-6 group-hover:translate-y-1 transition-transform" />
             Download APK v2.4
           </Button>
-          <Button size="lg" variant="outline" className="border-border hover:bg-secondary h-16 px-10 rounded-2xl flex items-center gap-3 text-lg font-semibold group">
-            <Layout className="h-6 w-6 text-accent" />
-            Google Play Store
+          <Button size="lg" variant="outline" asChild className="border-border hover:bg-secondary h-16 px-10 rounded-2xl flex items-center gap-3 text-lg font-semibold group">
+            <Link href={playStoreUrl} target="_blank">
+              <Layout className="h-6 w-6 text-accent" />
+              Google Play Store
+            </Link>
           </Button>
         </div>
 
