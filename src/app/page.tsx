@@ -2,7 +2,7 @@ import { DiscoveryTool } from "@/components/ai/DiscoveryTool";
 import { FeatureGrid } from "@/components/sections/FeatureGrid";
 import { PrivacyShowcase } from "@/components/sections/PrivacyShowcase";
 import { DownloadCenter } from "@/components/sections/DownloadCenter";
-import { Layout, Shield, Info, Download, ArrowRight, Github, Zap, CheckCircle2 } from "lucide-react";
+import { Layout, Shield, Info, ArrowRight, Github, Zap, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -12,9 +12,22 @@ export default function Home() {
   const showcaseImage = PlaceHolderImages.find(img => img.id === "app_showcase_dual");
   const playStoreUrl = "https://play.google.com/store/apps/details?id=com.unitool.ai";
 
+  const PlayStoreButton = () => (
+    <Button size="lg" asChild className="h-16 px-10 rounded-2xl bg-[#000000] hover:bg-[#1a1a1a] text-white flex items-center gap-4 text-lg font-semibold shadow-2xl transition-all hover:scale-105 border border-white/10 group">
+      <Link href={playStoreUrl} target="_blank" className="flex items-center gap-3">
+        <svg viewBox="0 0 24 24" className="h-8 w-8 fill-current" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.609 1.814L13.792 12 3.61 22.186a2.26 2.26 0 0 1-.61-1.57V3.384c0-.602.222-1.173.61-1.57zM14.505 12.71l2.54 2.54L5.346 22.316a2.22 2.22 0 0 0 1.25.184 2.13 2.13 0 0 0 1.154-.42l11.026-6.273-4.271-3.1zm4.187-5.597L7.665 1.488a2.13 2.13 0 0 0-1.154-.42 2.22 2.22 0 0 0-1.25.184l11.724 7.081-2.522 2.531 4.229-3.041zM19.167 13.91l3.571-2.031c.642-.366.642-1.393 0-1.758l-3.571-2.031-2.39 2.909 2.39 2.911z"/>
+        </svg>
+        <div className="flex flex-col items-start leading-none">
+          <span className="text-[10px] uppercase tracking-wider font-medium text-white/70">Get it on</span>
+          <span className="text-xl font-bold">Google Play</span>
+        </div>
+      </Link>
+    </Button>
+  );
+
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -36,7 +49,6 @@ export default function Home() {
       </header>
 
       <main className="flex-1">
-        {/* Hero Section */}
         <section className="relative pt-20 pb-32 px-4 overflow-hidden">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
           
@@ -44,7 +56,7 @@ export default function Home() {
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary text-accent text-sm font-semibold border border-accent/20 animate-in fade-in slide-in-from-bottom-2">
                 <Shield className="h-4 w-4" />
-                Version 2.4 Now Live with AES Encryption
+                Version 1.0.0 Now Live
               </div>
               <h1 className="text-6xl md:text-8xl font-headline font-bold tracking-tighter leading-[0.9] max-w-4xl mx-auto">
                 One Toolbox. <br />
@@ -53,6 +65,10 @@ export default function Home() {
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                 UniTool is the world&apos;s most comprehensive utility ecosystem. We bring 40+ professional-grade tools for media management, military-grade security, and document processing into one seamless interface.
               </p>
+            </div>
+
+            <div className="flex justify-center animate-in fade-in slide-in-from-top-4 duration-700">
+              <PlayStoreButton />
             </div>
 
             {showcaseImage && (
@@ -70,19 +86,8 @@ export default function Home() {
                   />
                 </div>
 
-                {/* Hero Download Button */}
-                <div className="flex justify-center animate-in fade-in slide-in-from-top-4 duration-700 delay-500">
-                  <Button size="lg" asChild className="h-16 px-10 rounded-2xl bg-[#000000] hover:bg-[#1a1a1a] text-white flex items-center gap-4 text-lg font-semibold shadow-2xl transition-all hover:scale-105 border border-white/10 group">
-                    <Link href={playStoreUrl} target="_blank" className="flex items-center gap-3">
-                      <svg viewBox="0 0 24 24" className="h-8 w-8 fill-current" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3.609 1.814L13.792 12 3.61 22.186a2.26 2.26 0 0 1-.61-1.57V3.384c0-.602.222-1.173.61-1.57zM14.505 12.71l2.54 2.54L5.346 22.316a2.22 2.22 0 0 0 1.25.184 2.13 2.13 0 0 0 1.154-.42l11.026-6.273-4.271-3.1zm4.187-5.597L7.665 1.488a2.13 2.13 0 0 0-1.154-.42 2.22 2.22 0 0 0-1.25.184l11.724 7.081-2.522 2.531 4.229-3.041zM19.167 13.91l3.571-2.031c.642-.366.642-1.393 0-1.758l-3.571-2.031-2.39 2.909 2.39 2.911z"/>
-                      </svg>
-                      <div className="flex flex-col items-start leading-none">
-                        <span className="text-[10px] uppercase tracking-wider font-medium text-white/70">Get it on</span>
-                        <span className="text-xl font-bold">Google Play</span>
-                      </div>
-                    </Link>
-                  </Button>
+                <div className="flex justify-center animate-in fade-in slide-in-from-bottom-4 duration-700">
+                  <PlayStoreButton />
                 </div>
               </div>
             )}
@@ -91,7 +96,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Value Proposition / Deep Content Section */}
         <section className="py-24 bg-card/30 border-y border-border/50">
           <div className="container mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -136,7 +140,7 @@ export default function Home() {
               </div>
               <div className="space-y-4">
                 <div className="p-8 bg-accent/10 rounded-[2rem] border border-accent/20 space-y-4">
-                  <Download className="h-8 w-8 text-accent" />
+                  <Layout className="h-8 w-8 text-accent" />
                   <h3 className="text-xl font-headline font-bold">Universal</h3>
                   <p className="text-sm text-muted-foreground">Support for 100+ major file types and media formats for seamless workflow.</p>
                 </div>
@@ -150,21 +154,17 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Feature Grid */}
         <section id="features" className="py-24 container mx-auto px-4">
           <FeatureGrid />
         </section>
 
-        {/* Privacy Section */}
         <section id="security" className="py-24 container mx-auto px-4">
           <PrivacyShowcase />
         </section>
 
-        {/* Download Section */}
         <DownloadCenter />
       </main>
 
-      {/* Footer */}
       <footer className="border-t border-border bg-card/50 pt-20 pb-10 px-4">
         <div className="container mx-auto space-y-16">
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10">
@@ -227,7 +227,7 @@ export default function Home() {
             <div className="flex items-center gap-6">
               <span>Made with Precision</span>
               <div className="h-4 w-px bg-border" />
-              <span>v2.4.0-stable</span>
+              <span>v1.0.0-stable</span>
             </div>
           </div>
         </div>
