@@ -1,21 +1,16 @@
+
 "use client";
 
 import { 
-  Smartphone, 
-  Gamepad2, 
-  ShieldCheck, 
-  Download, 
-  FileText, 
-  MessageSquare, 
-  Image as ImageIcon, 
+  ImageIcon, 
   Video, 
   Lock, 
-  Settings, 
+  MessageSquare, 
   Zap,
-  Music,
   GraduationCap,
   Calculator,
   Files,
+  FileText,
   ArrowUpRight,
   Sparkles
 } from "lucide-react";
@@ -30,9 +25,9 @@ const toolsData = [
     title: "Private Media Vault",
     url: "native://vault",
     thumbnail: "https://i.postimg.cc/6Q6JkFBZ/Picsart-26-05-28-01-24-06-478.jpg",
-    description: "Military-grade AES-256 encryption to securely hide and lock your private photos and videos.",
+    description: "Securely hide and lock your private photos and videos.",
     category: "Security",
-    tag: "featured",
+    tag: "popular",
     icon: Lock,
     color: "text-primary",
     large: true
@@ -42,7 +37,7 @@ const toolsData = [
     title: "Global Status Saver",
     url: "native://status_saver",
     thumbnail: "https://i.postimg.cc/tJSBrTBd/Picsart-26-05-27-13-53-15-241.jpg",
-    description: "One-tap saving for all WhatsApp and Business statuses. Zero tracking, zero cloud storage.",
+    description: "One-tap saving for all WhatsApp and Business statuses.",
     category: "Media",
     icon: MessageSquare,
     color: "text-green-400",
@@ -53,7 +48,7 @@ const toolsData = [
     title: "Universal Converter",
     url: "https://tinywow.com/tools/file_conversion",
     thumbnail: "https://i.postimg.cc/PJnYzCGN/file-000000009c88720684ba1cc94cee3d0a.png",
-    description: "40+ professional tools for rapid file conversion between any format.",
+    description: "40+ tools for rapid file conversion between any format.",
     category: "Utilities",
     tag: "40+ Tools",
     icon: Files,
@@ -64,7 +59,7 @@ const toolsData = [
     title: "Studio Image Suite",
     url: "https://tinywow.com/tools/image",
     thumbnail: "https://i.postimg.cc/65YzwhJ0/file-000000003904720999df914a30fd482e.png",
-    description: "Complete image editing, resizing, and professional design ecosystem.",
+    description: "Complete image editing and professional design tools.",
     category: "Design",
     tag: "30+ Tools",
     icon: ImageIcon,
@@ -75,7 +70,7 @@ const toolsData = [
     title: "Precise Age Engine",
     url: "https://www.calculator.net/age-calculator.html",
     thumbnail: "https://i.postimg.cc/8cg3m6RV/IMG-20250618-WA0072.jpg",
-    description: "Calculates exact chronological age with down-to-the-second accuracy.",
+    description: "Calculates exact chronological age with accuracy.",
     category: "Utilities",
     icon: Calculator,
     color: "text-yellow-400"
@@ -85,7 +80,7 @@ const toolsData = [
     title: "Pro PDF Manager",
     url: "https://tinywow.com/tools/pdf",
     thumbnail: "https://i.postimg.cc/jj0pmJwt/file-000000005d987208a105f0dc868c24a9.png",
-    description: "Advanced PDF merging, compression, and editing for professional workflows.",
+    description: "Advanced PDF merging and editing for your work.",
     category: "Documents",
     tag: "Pro",
     icon: FileText,
@@ -96,7 +91,7 @@ const toolsData = [
     title: "Video Power Tools",
     url: "https://tinywow.com/tools/video",
     thumbnail: "https://i.postimg.cc/Zq1V2KkM/file-000000008db07206a43a7d513faee56c.png",
-    description: "High-fidelity video downloading and frame-accurate editing tools.",
+    description: "High-quality video downloading and editing tools.",
     category: "Media",
     tag: "New",
     icon: Video,
@@ -107,33 +102,11 @@ const toolsData = [
     title: "AI Writing Hub",
     url: "https://tinywow.com/tools/write",
     thumbnail: "https://i.postimg.cc/Wp0HRr4T/file-00000000d3e47206adde16937bd9c0f6.png",
-    description: "Leverage advanced AI models to generate high-quality copy and creative content.",
-    category: "AI Tools",
+    description: "Use AI to generate high-quality text and content.",
+    category: "AI",
     tag: "AI Powered",
     icon: Zap,
     color: "text-primary"
-  },
-  {
-    id: "maths_solver",
-    title: "AI Maths Solver",
-    url: "https://notegpt.io/ai-math-solver",
-    thumbnail: "https://i.postimg.cc/5twhggTN/256x256bb.jpg",
-    description: "Step-by-step visual solutions for complex mathematical problems using AI.",
-    category: "Education",
-    tag: "Smart",
-    icon: GraduationCap,
-    color: "text-cyan-400"
-  },
-  {
-    id: "img_bg_remover",
-    title: "Smart BG Remover",
-    url: "https://tinywow.com/image/remove-bg",
-    thumbnail: "https://i.postimg.cc/1RLRbCH9/images-11.jpg",
-    description: "Neural network-based background removal with pixel-perfect edge detection.",
-    category: "AI Design",
-    tag: "Instant",
-    icon: Sparkles,
-    color: "text-emerald-400"
   }
 ];
 
@@ -142,18 +115,10 @@ export function FeatureGrid() {
     <div className="space-y-16">
       <div className="flex flex-col md:flex-row items-end justify-between gap-8 border-l-4 border-primary pl-8">
         <div className="space-y-4">
-          <h2 className="text-5xl font-headline font-bold text-gradient">The Ecosystem.</h2>
-          <p className="text-xl text-muted-foreground font-medium max-w-xl">
-            Explore 16 modular high-performance utilities curated for elite digital workflows.
+          <h2 className="text-4xl font-headline font-bold text-gradient">The Ecosystem</h2>
+          <p className="text-lg text-muted-foreground font-medium max-w-xl">
+            Explore simple and powerful tools designed to help you every day.
           </p>
-        </div>
-        <div className="flex items-center gap-4">
-          <Badge className="px-6 py-2 rounded-2xl bg-white/5 text-white/80 border-white/10 text-xs font-bold uppercase tracking-widest">
-            16 Modules Active
-          </Badge>
-          <Badge className="px-6 py-2 rounded-2xl bg-primary/20 text-primary border-primary/20 text-xs font-bold uppercase tracking-widest">
-            v1.0.0 Stable
-          </Badge>
         </div>
       </div>
 
@@ -173,46 +138,39 @@ export function FeatureGrid() {
               className="group block h-full"
             >
               <Card className="h-full glass-card hover:bg-white/[0.08] transition-all duration-500 overflow-hidden relative flex flex-col group-hover:border-primary/40 group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)]">
-                {/* Floating Badge */}
                 {tool.tag && (
                   <div className="absolute top-3 right-3 z-20">
-                    <Badge className="bg-primary text-white border-none text-[9px] px-2 py-0.5 uppercase tracking-[0.2em] font-black">
+                    <Badge className="bg-primary text-white border-none text-[8px] px-2 py-0.5 uppercase tracking-widest font-black">
                       {tool.tag}
                     </Badge>
                   </div>
                 )}
 
-                {/* Thumbnail - Adjusted Aspect Ratio for more length */}
-                <div className={`relative w-full overflow-hidden ${tool.large ? 'aspect-[16/11]' : 'aspect-[16/13]'}`}>
+                {/* Taller Aspect Ratio for images */}
+                <div className={`relative w-full overflow-hidden ${tool.large ? 'aspect-[3/4]' : 'aspect-[3/4.5]'}`}>
                   <img 
                     src={tool.thumbnail} 
                     alt={tool.title}
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
                   
-                  {/* Category Label */}
                   <div className="absolute bottom-3 left-4 flex items-center gap-2">
-                    <div className={`p-1.5 rounded-lg bg-background/80 backdrop-blur-md border border-white/10 shadow-lg ${tool.color}`}>
+                    <div className={`p-1.5 rounded-lg bg-background/80 backdrop-blur-md border border-white/10 ${tool.color}`}>
                       <tool.icon className="h-4 w-4" />
                     </div>
-                    <span className="text-[9px] font-black uppercase tracking-[0.2em] text-white/60">
-                      {tool.category}
-                    </span>
                   </div>
                 </div>
 
-                {/* Card Content - Made smaller in height */}
-                <CardHeader className="flex-1 p-5 space-y-2">
-                  <div className="space-y-1">
-                    <CardTitle className="text-lg font-headline group-hover:text-primary transition-colors flex items-center justify-between">
-                      {tool.title}
-                      <ArrowUpRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-all -translate-x-1 group-hover:translate-x-0" />
-                    </CardTitle>
-                    <CardDescription className="text-muted-foreground text-xs leading-relaxed line-clamp-2 font-medium">
-                      {tool.description}
-                    </CardDescription>
-                  </div>
+                {/* Small height text area */}
+                <CardHeader className="p-3 space-y-1">
+                  <CardTitle className="text-base font-headline group-hover:text-primary transition-colors flex items-center justify-between">
+                    {tool.title}
+                    <ArrowUpRight className="h-3.5 w-3.5 opacity-0 group-hover:opacity-100 transition-all" />
+                  </CardTitle>
+                  <CardDescription className="text-muted-foreground text-[10px] leading-tight line-clamp-1 font-medium">
+                    {tool.description}
+                  </CardDescription>
                 </CardHeader>
               </Card>
             </Link>

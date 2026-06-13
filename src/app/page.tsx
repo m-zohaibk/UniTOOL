@@ -2,7 +2,7 @@
 import { FeatureGrid } from "@/components/sections/FeatureGrid";
 import { PrivacyShowcase } from "@/components/sections/PrivacyShowcase";
 import { DownloadCenter } from "@/components/sections/DownloadCenter";
-import { Layout, Shield, Info, ArrowRight, Github, Zap, CheckCircle2, Star, Download, MousePointer2 } from "lucide-react";
+import { Info, Github, CheckCircle2, Star, Download } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -11,6 +11,7 @@ import Image from "next/image";
 export default function Home() {
   const showcaseImage = PlaceHolderImages.find(img => img.id === "app_showcase_dual");
   const playStoreUrl = "https://play.google.com/store/apps/details?id=com.unitool.ai";
+  const logoUrl = "https://i.postimg.cc/wTbXkjTg/unnamed.webp";
 
   const PlayStoreButton = ({ className = "" }: { className?: string }) => (
     <Button size="lg" asChild className={`h-16 px-10 rounded-2xl bg-[#000000] hover:bg-[#111] text-white flex items-center gap-4 text-lg font-bold shadow-2xl transition-all hover:scale-[1.02] active:scale-[0.98] border border-white/10 group ${className}`}>
@@ -31,15 +32,14 @@ export default function Home() {
       <header className="fixed top-0 z-[100] w-full glass-nav">
         <div className="container mx-auto px-6 h-20 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-            <div className="p-2.5 primary-gradient rounded-xl shadow-lg shadow-primary/20">
-              <Layout className="h-6 w-6 text-white" />
+            <div className="relative w-10 h-10 overflow-hidden rounded-xl">
+              <Image src={logoUrl} alt="UniTool Logo" fill className="object-cover" />
             </div>
             <span className="font-headline font-bold text-2xl tracking-tight text-gradient">UniTool</span>
           </Link>
           
           <nav className="hidden md:flex items-center gap-10">
             <Link href="#features" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Features</Link>
-            <Link href="#security" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Security</Link>
             <Link href="/privacy" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">Privacy</Link>
             <Button size="sm" asChild className="rounded-full px-6 font-bold bg-primary/10 text-primary hover:bg-primary/20 border border-primary/20">
               <Link href={playStoreUrl} target="_blank">Download</Link>
@@ -49,7 +49,6 @@ export default function Home() {
       </header>
 
       <main className="flex-1 pt-20">
-        {/* Hero Section */}
         <section className="relative pt-24 pb-40 px-6 overflow-hidden">
           <div className="hero-glow" />
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[800px] bg-primary/5 blur-[160px] rounded-full -z-10" />
@@ -57,15 +56,14 @@ export default function Home() {
           <div className="container mx-auto text-center space-y-16 relative z-10">
             <div className="space-y-8 max-w-5xl mx-auto">
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/5 text-primary text-xs font-bold border border-primary/20 tracking-wider uppercase">
-                <Shield className="h-3 w-3" />
-                V1.0.0 Stable Release
+                V1.0 Stable Release
               </div>
-              <h1 className="text-4xl md:text-5xl font-headline font-bold tracking-tighter leading-[1.1] text-gradient">
+              <h1 className="text-3xl md:text-5xl font-headline font-bold tracking-tighter leading-tight text-gradient">
                 One Toolbox. <br />
-                <span className="text-primary">Infinite</span> Potential.
+                <span className="text-primary">Infinite Potential.</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-medium">
-                The ultimate collection of 40+ powerful tools for your phone. Fast, secure, and easy to use.
+                The ultimate set of tools for your phone. Fast, secure, and easy for everyone.
               </p>
               
               <div className="flex flex-col sm:flex-row justify-center items-center gap-6 pt-4">
@@ -74,7 +72,7 @@ export default function Home() {
                   <div className="flex items-center gap-1 text-yellow-500">
                     {[1,2,3,4,5].map(i => <Star key={i} className="h-4 w-4 fill-current" />)}
                   </div>
-                  <span className="text-xs font-bold text-white/60 tracking-widest uppercase">4.9/5 Average Rating</span>
+                  <span className="text-xs font-bold text-white/60 tracking-widest uppercase">4.9/5 Rating</span>
                 </div>
               </div>
             </div>
@@ -85,28 +83,15 @@ export default function Home() {
                 <div className="relative animate-float">
                   <Image 
                     src={showcaseImage.imageUrl} 
-                    alt="UniTool App Interface Showcase"
+                    alt="UniTool App Showcase"
                     width={1200}
                     height={800}
-                    className="w-full max-w-5xl mx-auto h-auto drop-shadow-[0_40px_80px_rgba(0,0,0,0.5)] rounded-[3rem] border border-white/10 glass-card p-2"
+                    className="w-full max-w-4xl mx-auto h-auto drop-shadow-[0_40px_80px_rgba(0,0,0,0.5)] rounded-[2.5rem] border border-white/10 glass-card p-2"
                     priority
                     data-ai-hint={showcaseImage.imageHint}
                   />
-                  <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-full max-w-md">
-                    <div className="p-6 glass-card rounded-3xl flex items-center justify-between gap-4">
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-2xl bg-primary/20 flex items-center justify-center">
-                          <Download className="h-6 w-6 text-primary" />
-                        </div>
-                        <div className="text-left">
-                          <p className="text-sm font-bold">Official Store</p>
-                          <p className="text-xs text-muted-foreground">com.unitool.ai</p>
-                        </div>
-                      </div>
-                      <Button asChild size="sm" className="rounded-xl font-bold px-6">
-                        <Link href={playStoreUrl} target="_blank">Download App</Link>
-                      </Button>
-                    </div>
+                  <div className="mt-12 flex justify-center">
+                    <PlayStoreButton />
                   </div>
                 </div>
               </div>
@@ -114,88 +99,28 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Value Proposition */}
-        <section className="py-32 relative">
-          <div className="container mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-24 items-center">
-              <div className="space-y-12">
-                <div className="space-y-6">
-                  <h2 className="text-4xl md:text-6xl font-headline font-bold leading-[1.1] text-gradient">
-                    Built for <br /><span className="text-primary">Everyone.</span>
-                  </h2>
-                  <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                    <p>
-                      UniTool is a complete toolkit for your digital life. While other apps need slow internet servers, UniTool works directly on your phone. This means your files stay private and everything happens instantly.
-                    </p>
-                    <p>
-                      Our app is designed to help you get things done faster. From protecting your photos to editing PDFs, UniTool is the only app you need for your media and documents.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="grid sm:grid-cols-2 gap-6">
-                  {[
-                    "Secure Photo Vault",
-                    "Works Without Internet",
-                    "Smart Tool Search",
-                    "Supports All Files",
-                    "Private Media Tools",
-                    "Fast PDF Editor"
-                  ].map((text, i) => (
-                    <div key={i} className="flex items-center gap-3">
-                      <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                        <CheckCircle2 className="h-4 w-4 text-primary" />
-                      </div>
-                      <span className="text-sm font-bold text-white/80">{text}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="relative">
-                <div className="absolute inset-0 bg-primary/10 blur-[100px] rounded-full" />
-                <div className="grid grid-cols-2 gap-6 relative">
-                  <div className="space-y-6 pt-12">
-                    <div className="p-10 glass-card rounded-[2.5rem] space-y-4 hover:border-primary/50 transition-colors">
-                      <Zap className="h-10 w-10 text-accent" />
-                      <h3 className="text-2xl font-headline font-bold">Very Fast</h3>
-                      <p className="text-sm text-muted-foreground">Everything happens instantly on your phone.</p>
-                    </div>
-                    <div className="p-10 glass-card rounded-[2.5rem] space-y-4 hover:border-primary/50 transition-colors bg-primary/5">
-                      <Shield className="h-10 w-10 text-primary" />
-                      <h3 className="text-2xl font-headline font-bold">Secure</h3>
-                      <p className="text-sm text-muted-foreground">Your private files stay safe and locked.</p>
-                    </div>
-                  </div>
-                  <div className="space-y-6">
-                    <div className="p-10 glass-card rounded-[2.5rem] space-y-4 hover:border-primary/50 transition-colors">
-                      <MousePointer2 className="h-10 w-10 text-accent" />
-                      <h3 className="text-2xl font-headline font-bold">Easy to Use</h3>
-                      <p className="text-sm text-muted-foreground">Simple design that helps you find tools quickly.</p>
-                    </div>
-                    <div className="p-10 glass-card rounded-[2.5rem] space-y-4 hover:border-primary/50 transition-colors">
-                      <Download className="h-10 w-10 text-primary" />
-                      <h3 className="text-2xl font-headline font-bold">Offline</h3>
-                      <p className="text-sm text-muted-foreground">Use all features even without internet.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Feature Ecosystem */}
         <section id="features" className="py-32 container mx-auto px-6">
           <FeatureGrid />
         </section>
 
-        {/* Security Section */}
-        <section id="security" className="py-32 container mx-auto px-6">
-          <PrivacyShowcase />
+        <section className="py-32 relative">
+          <div className="container mx-auto px-6 text-center space-y-12">
+            <h2 className="text-3xl md:text-5xl font-headline font-bold text-gradient">Built for Everyone</h2>
+            <div className="max-w-3xl mx-auto space-y-6 text-lg text-muted-foreground">
+              <p>UniTool is a complete toolkit for your digital life. We designed it to be as simple as possible so anyone can use it without confusion.</p>
+              <p>From saving status updates to editing files, everything happens instantly on your device. You don't even need the internet for most features.</p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-6 pt-6">
+              {["Secure Vault", "No Cloud Needed", "Easy Search", "Fast Editing"].map((item, i) => (
+                <div key={i} className="flex items-center gap-2 px-6 py-3 glass-card rounded-2xl">
+                  <CheckCircle2 className="h-5 w-5 text-primary" />
+                  <span className="font-bold">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </section>
 
-        {/* Final CTA */}
         <div className="pb-32">
           <DownloadCenter />
         </div>
@@ -206,13 +131,13 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-16">
             <div className="col-span-2 space-y-8">
               <div className="flex items-center gap-3">
-                <div className="p-2 primary-gradient rounded-xl">
-                  <Layout className="h-5 w-5 text-white" />
+                <div className="relative w-8 h-8 overflow-hidden rounded-lg">
+                  <Image src={logoUrl} alt="UniTool Logo" fill className="object-cover" />
                 </div>
                 <span className="font-headline font-bold text-2xl text-gradient">UniTool</span>
               </div>
-              <p className="text-muted-foreground max-sm leading-relaxed text-lg font-medium">
-                The ultimate professional toolkit. Built for those who prioritize privacy, performance, and power.
+              <p className="text-muted-foreground max-w-sm leading-relaxed text-lg font-medium">
+                The ultimate toolkit for your mobile life. Easy, fast, and secure.
               </p>
               <div className="flex items-center gap-4">
                 <Button variant="ghost" size="icon" className="w-12 h-12 rounded-xl hover:bg-white/5 hover:text-primary">
@@ -230,7 +155,6 @@ export default function Home() {
                 <li><Link href={playStoreUrl} className="hover:text-white transition-colors">Media Vault</Link></li>
                 <li><Link href={playStoreUrl} className="hover:text-white transition-colors">Status Saver</Link></li>
                 <li><Link href={playStoreUrl} className="hover:text-white transition-colors">PDF Toolkit</Link></li>
-                <li><Link href={playStoreUrl} className="hover:text-white transition-colors">AI Writer</Link></li>
               </ul>
             </div>
 
@@ -248,19 +172,15 @@ export default function Home() {
               <div className="p-6 glass-card rounded-2xl space-y-3">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                  <span className="text-xs font-bold text-white/70">Systems Optimal</span>
+                  <span className="text-xs font-bold text-white/70">Online</span>
                 </div>
-                <p className="text-[10px] text-muted-foreground font-mono">v1.0.0-stable</p>
+                <p className="text-[10px] text-muted-foreground font-mono">v1.0.0</p>
               </div>
             </div>
           </div>
           
           <div className="mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-xs font-bold text-muted-foreground uppercase tracking-widest">
-            <p>© 2026 UniTool Labs. Engineered for Excellence.</p>
-            <div className="flex items-center gap-8">
-              <span>Security Audited</span>
-              <span>Global Support</span>
-            </div>
+            <p>© 2026 UniTool Labs. Simple tools for everyone.</p>
           </div>
         </div>
       </footer>
