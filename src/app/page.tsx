@@ -61,12 +61,12 @@ export default function Home() {
                 <Shield className="h-3 w-3" />
                 V1.0.0 Stable Release
               </div>
-              <h1 className="text-5xl md:text-7xl font-headline font-bold tracking-tighter leading-[1.1] text-gradient">
+              <h1 className="text-5xl md:text-6xl font-headline font-bold tracking-tighter leading-[1.1] text-gradient">
                 One Toolbox. <br />
                 <span className="text-primary">Infinite</span> Potential.
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-medium">
-                The definitive professional-grade ecosystem. 40+ high-performance utilities for media, security, and document management—all processing strictly on-device.
+                The ultimate collection of 40+ powerful tools for your phone. Fast, secure, and easy to use.
               </p>
               
               <div className="flex flex-col sm:flex-row justify-center items-center gap-6 pt-4">
@@ -126,26 +126,26 @@ export default function Home() {
               <div className="space-y-12">
                 <div className="space-y-6">
                   <h2 className="text-4xl md:text-6xl font-headline font-bold leading-[1.1] text-gradient">
-                    Built for the <br /><span className="text-primary">Power User.</span>
+                    Built for <br /><span className="text-primary">Everyone.</span>
                   </h2>
                   <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                     <p>
-                      UniTool represents a paradigm shift in utility software. While others depend on vulnerable cloud servers, we prioritize <strong>local-first architecture</strong>. Every conversion, every encryption, and every AI-powered enhancement happens entirely on your device's hardware.
+                      UniTool is a complete toolkit for your digital life. While other apps need slow internet servers, UniTool works directly on your phone. This means your files stay private and everything happens instantly.
                     </p>
                     <p>
-                      Our 1.0.0 suite is engineered for professionals who demand zero-latency and maximum privacy. From military-grade AES-256 media protection to high-fidelity PDF processing, UniTool is your private digital command center.
+                      Our app is designed to help you get things done faster. From protecting your photos to editing PDFs, UniTool is the only app you need for your media and documents.
                     </p>
                   </div>
                 </div>
                 
                 <div className="grid sm:grid-cols-2 gap-6">
                   {[
-                    "On-Device AES-256 Encryption",
-                    "Zero-Network Cloudless Flow",
-                    "AI Smart Discovery System",
-                    "100+ Supported File Formats",
-                    "Privacy-First Media Handling",
-                    "High-Performance PDF Engine"
+                    "Secure Photo Vault",
+                    "Works Without Internet",
+                    "Smart Tool Search",
+                    "Supports All Files",
+                    "Private Media Tools",
+                    "Fast PDF Editor"
                   ].map((text, i) => (
                     <div key={i} className="flex items-center gap-3">
                       <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
@@ -163,25 +163,25 @@ export default function Home() {
                   <div className="space-y-6 pt-12">
                     <div className="p-10 glass-card rounded-[2.5rem] space-y-4 hover:border-primary/50 transition-colors">
                       <Zap className="h-10 w-10 text-accent" />
-                      <h3 className="text-2xl font-headline font-bold">Ultra Fast</h3>
-                      <p className="text-sm text-muted-foreground">Leverage local CPU cycles for instant utility results.</p>
+                      <h3 className="text-2xl font-headline font-bold">Very Fast</h3>
+                      <p className="text-sm text-muted-foreground">Everything happens instantly on your phone.</p>
                     </div>
                     <div className="p-10 glass-card rounded-[2.5rem] space-y-4 hover:border-primary/50 transition-colors bg-primary/5">
                       <Shield className="h-10 w-10 text-primary" />
                       <h3 className="text-2xl font-headline font-bold">Secure</h3>
-                      <p className="text-sm text-muted-foreground">Hardware-level encryption for your sensitive assets.</p>
+                      <p className="text-sm text-muted-foreground">Your private files stay safe and locked.</p>
                     </div>
                   </div>
                   <div className="space-y-6">
                     <div className="p-10 glass-card rounded-[2.5rem] space-y-4 hover:border-primary/50 transition-colors">
                       <MousePointer2 className="h-10 w-10 text-accent" />
-                      <h3 className="text-2xl font-headline font-bold">Intuitive</h3>
-                      <p className="text-sm text-muted-foreground">Smart interface designed for rapid tool discovery.</p>
+                      <h3 className="text-2xl font-headline font-bold">Easy to Use</h3>
+                      <p className="text-sm text-muted-foreground">Simple design that helps you find tools quickly.</p>
                     </div>
                     <div className="p-10 glass-card rounded-[2.5rem] space-y-4 hover:border-primary/50 transition-colors">
                       <Download className="h-10 w-10 text-primary" />
                       <h3 className="text-2xl font-headline font-bold">Offline</h3>
-                      <p className="text-sm text-muted-foreground">Full functionality even in complete isolation.</p>
+                      <p className="text-sm text-muted-foreground">Use all features even without internet.</p>
                     </div>
                   </div>
                 </div>

@@ -10,18 +10,18 @@ export function PrivacyShowcase() {
   const pillars = [
     {
       icon: Lock,
-      title: "AES-256 Protocol",
-      desc: "Military-grade encryption at rest. Your vault keys are generated and stored strictly within your device's Secure Enclave."
+      title: "Strong Security",
+      desc: "We use top-level encryption to keep your files safe. Your keys are kept only on your phone."
     },
     {
       icon: ServerOff,
-      title: "Zero-Cloud Flow",
-      desc: "We operate with a strict no-server policy. Your files never leave your hardware. True privacy is offline."
+      title: "No Servers Needed",
+      desc: "Your files never leave your phone. We don't use cloud storage, so your data stays private."
     },
     {
       icon: EyeOff,
-      title: "Blind Sandbox",
-      desc: "All media processing is isolated. Our Status Saver scrub metadata locally, preventing third-party tracking."
+      title: "Private Tools",
+      desc: "All processing happens in a safe space on your phone. No one else can see what you are doing."
     }
   ];
 
@@ -31,10 +31,10 @@ export function PrivacyShowcase() {
       
       <div className="max-w-6xl mx-auto space-y-20 relative z-10">
         <div className="text-center space-y-6 max-w-3xl mx-auto">
-          <Badge className="bg-primary/20 text-primary px-6 py-2 rounded-full border-primary/20 text-xs font-black uppercase tracking-[0.3em] mb-4">Security Protocol 1.0</Badge>
-          <h2 className="text-5xl md:text-7xl font-headline font-bold text-gradient">Privacy Sovereignty.</h2>
+          <Badge className="bg-primary/20 text-primary px-6 py-2 rounded-full border-primary/20 text-xs font-black uppercase tracking-[0.3em] mb-4">Privacy First</Badge>
+          <h2 className="text-5xl md:text-7xl font-headline font-bold text-gradient">Your Privacy.</h2>
           <p className="text-xl text-muted-foreground font-medium leading-relaxed">
-            UniTool is engineered on the principle that digital utilities should never demand your personal data as currency.
+            UniTool is built to keep your personal files safe. We don't need your data to work.
           </p>
         </div>
 
@@ -69,20 +69,20 @@ export function PrivacyShowcase() {
             <div className="space-y-4">
               <h4 className="text-3xl font-headline font-bold flex items-center gap-3">
                 <Cpu className="h-8 w-8 text-accent" />
-                Edge Intelligence
+                Fast & Local
               </h4>
               <p className="text-xl text-muted-foreground leading-relaxed font-medium">
-                Every calculation, from AI-powered search to image upscaling, is performed locally on your device's NPU/CPU. We use optimized quantization to ensure desktop-class performance without the need for an internet connection.
+                Everything in the app, from searching to editing images, happens right on your phone. You don't even need an internet connection to use our powerful tools.
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
               <div className="px-6 py-3 bg-white/5 border border-white/10 rounded-2xl flex items-center gap-2">
                 <Shield className="h-4 w-4 text-primary" />
-                <span className="text-xs font-bold uppercase tracking-widest">Kernel Secure</span>
+                <span className="text-xs font-bold uppercase tracking-widest">Safe Core</span>
               </div>
               <div className="px-6 py-3 bg-white/5 border border-white/10 rounded-2xl flex items-center gap-2">
                 <Fingerprint className="h-4 w-4 text-accent" />
-                <span className="text-xs font-bold uppercase tracking-widest">Biometric Flow</span>
+                <span className="text-xs font-bold uppercase tracking-widest">Private Access</span>
               </div>
             </div>
           </div>
@@ -94,7 +94,7 @@ export function PrivacyShowcase() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center space-y-2">
                   <p className="text-4xl font-headline font-black text-white">100%</p>
-                  <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">On-Device</p>
+                  <p className="text-xs font-bold uppercase tracking-[0.3em] text-primary">Private</p>
                 </div>
               </div>
             </div>
