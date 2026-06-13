@@ -7,15 +7,18 @@ const baseUrl = 'https://unitool.qzz.io';
 const logoUrl = 'https://i.postimg.cc/wTbXkjTg/unnamed.webp';
 
 export const metadata: Metadata = {
-  title: 'UniTool: All-in-One Professional Utility & Media Toolbox',
-  description: 'UniTool is the ultimate professional toolbox for media, security, and document management. Access 40+ powerful local utilities.',
-  keywords: 'UniTool, utility app, media vault, status saver, PDF tools, file conversion, AI writer, private security',
+  title: 'UniTool: All-in-One Utility App',
+  description: 'The easiest toolbox for your phone. Fast, safe, and simple media and file tools for everyone.',
+  keywords: 'UniTool, utility app, media vault, status saver, PDF tools, file conversion, simple tools',
   alternates: {
     canonical: baseUrl,
   },
+  icons: {
+    icon: logoUrl,
+  },
   openGraph: {
-    title: 'UniTool: All-in-One Professional Utility & Media Toolbox',
-    description: 'The ultimate professional toolbox for media, security, and document management. 40+ local utilities for power users.',
+    title: 'UniTool: All-in-One Utility App',
+    description: 'The easiest toolbox for your phone. Fast, safe, and simple tools for everyone.',
     url: baseUrl,
     siteName: 'UniTool',
     images: [
@@ -31,8 +34,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary',
-    title: 'UniTool: All-in-One Professional Utility & Media Toolbox',
-    description: 'The ultimate professional toolbox for media, security, and document management.',
+    title: 'UniTool: All-in-One Utility App',
+    description: 'The easiest toolbox for your phone. Fast and simple tools.',
     images: [logoUrl],
   },
   verification: {
@@ -61,18 +64,7 @@ export default function RootLayout({
       "price": "0",
       "priceCurrency": "USD"
     },
-    "description": "The most comprehensive set of professional tools for media, security, and document management."
-  };
-
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "UniTool Labs",
-    "url": baseUrl,
-    "logo": logoUrl,
-    "sameAs": [
-      "https://github.com/unitool-labs"
-    ]
+    "description": "Simple and fast utility tools for everyone."
   };
 
   return (
@@ -84,10 +76,6 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
       <body className="font-body antialiased min-h-screen bg-background text-foreground">
