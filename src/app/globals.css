@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -56,7 +55,7 @@
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-auto-rows: 240px;
+  grid-auto-rows: auto;
   gap: 1.5rem;
 }
 

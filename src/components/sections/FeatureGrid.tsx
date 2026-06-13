@@ -1,4 +1,3 @@
-
 "use client";
 
 import { 
@@ -176,40 +175,41 @@ export function FeatureGrid() {
               <Card className="h-full glass-card hover:bg-white/[0.08] transition-all duration-500 overflow-hidden relative flex flex-col group-hover:border-primary/40 group-hover:shadow-[0_20px_40px_rgba(0,0,0,0.3)]">
                 {/* Floating Badge */}
                 {tool.tag && (
-                  <div className="absolute top-4 right-4 z-20">
-                    <Badge className="bg-primary text-white border-none text-[10px] px-3 py-1 uppercase tracking-[0.2em] font-black">
+                  <div className="absolute top-3 right-3 z-20">
+                    <Badge className="bg-primary text-white border-none text-[9px] px-2 py-0.5 uppercase tracking-[0.2em] font-black">
                       {tool.tag}
                     </Badge>
                   </div>
                 )}
 
-                {/* Thumbnail */}
-                <div className="relative w-full aspect-video overflow-hidden">
+                {/* Thumbnail - Adjusted Aspect Ratio for more length */}
+                <div className={`relative w-full overflow-hidden ${tool.large ? 'aspect-[16/11]' : 'aspect-[16/13]'}`}>
                   <img 
                     src={tool.thumbnail} 
                     alt={tool.title}
                     className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
                   
                   {/* Category Label */}
-                  <div className="absolute bottom-4 left-6 flex items-center gap-3">
-                    <div className={`p-2.5 rounded-xl bg-background/80 backdrop-blur-md border border-white/10 shadow-xl ${tool.color}`}>
-                      <tool.icon className="h-5 w-5" />
+                  <div className="absolute bottom-3 left-4 flex items-center gap-2">
+                    <div className={`p-1.5 rounded-lg bg-background/80 backdrop-blur-md border border-white/10 shadow-lg ${tool.color}`}>
+                      <tool.icon className="h-4 w-4" />
                     </div>
-                    <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/50">
+                    <span className="text-[9px] font-black uppercase tracking-[0.2em] text-white/60">
                       {tool.category}
                     </span>
                   </div>
                 </div>
 
-                <CardHeader className="flex-1 p-8 space-y-4">
-                  <div className="space-y-3">
-                    <CardTitle className="text-2xl font-headline group-hover:text-primary transition-colors flex items-center justify-between">
+                {/* Card Content - Made smaller in height */}
+                <CardHeader className="flex-1 p-5 space-y-2">
+                  <div className="space-y-1">
+                    <CardTitle className="text-lg font-headline group-hover:text-primary transition-colors flex items-center justify-between">
                       {tool.title}
-                      <ArrowUpRight className="h-5 w-5 opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0" />
+                      <ArrowUpRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-all -translate-x-1 group-hover:translate-x-0" />
                     </CardTitle>
-                    <CardDescription className="text-muted-foreground text-sm leading-relaxed line-clamp-2 font-medium">
+                    <CardDescription className="text-muted-foreground text-xs leading-relaxed line-clamp-2 font-medium">
                       {tool.description}
                     </CardDescription>
                   </div>
