@@ -1,5 +1,4 @@
 
-import { DiscoveryTool } from "@/components/ai/DiscoveryTool";
 import { FeatureGrid } from "@/components/sections/FeatureGrid";
 import { PrivacyShowcase } from "@/components/sections/PrivacyShowcase";
 import { DownloadCenter } from "@/components/sections/DownloadCenter";
@@ -61,11 +60,11 @@ export default function Home() {
                 <Shield className="h-3 w-3" />
                 V1.0.0 Stable Release
               </div>
-              <h1 className="text-5xl md:text-6xl font-headline font-bold tracking-tighter leading-[1.1] text-gradient">
+              <h1 className="text-4xl md:text-5xl font-headline font-bold tracking-tighter leading-[1.1] text-gradient">
                 One Toolbox. <br />
                 <span className="text-primary">Infinite</span> Potential.
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-medium">
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-medium">
                 The ultimate collection of 40+ powerful tools for your phone. Fast, secure, and easy to use.
               </p>
               
@@ -112,10 +111,6 @@ export default function Home() {
                 </div>
               </div>
             )}
-
-            <div className="pt-32">
-              <DiscoveryTool />
-            </div>
           </div>
         </section>
 
