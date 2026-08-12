@@ -1,10 +1,13 @@
 
+'use client';
+
 import { FeatureGrid } from "@/components/sections/FeatureGrid";
 import { Star } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const showcaseImage = PlaceHolderImages.find(img => img.id === "app_showcase_dual");
@@ -47,22 +50,41 @@ export default function Home() {
       </header>
 
       <main className="flex-1 pt-16">
-        <section className="relative pt-12 pb-20 px-6 overflow-hidden">
+        <section className="relative pt-12 pb-20 px-6 overflow-hidden text-center">
           <div className="hero-glow" />
-          <div className="container mx-auto text-center space-y-12 relative z-10">
+          <div className="container mx-auto space-y-12 relative z-10">
             <div className="space-y-6 max-w-4xl mx-auto">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 text-primary text-[10px] font-black border border-primary/20 tracking-[0.2em] uppercase">
+              <motion.div 
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/5 text-primary text-[10px] font-black border border-primary/20 tracking-[0.2em] uppercase"
+              >
                 V1.0.0 Stable Release
-              </div>
-              <h1 className="text-3xl md:text-4xl font-headline font-bold tracking-tighter leading-tight text-gradient">
+              </motion.div>
+              <motion.h1 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                className="text-3xl md:text-4xl font-headline font-bold tracking-tighter leading-tight text-gradient"
+              >
                 One Toolbox. <br />
                 <span className="text-primary">Infinite Potential.</span>
-              </h1>
-              <p className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed font-medium">
-                The ultimate set of tools for your phone. Fast, safe, and easy for everyone.
-              </p>
+              </motion.h1>
+              <motion.p 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+                className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed font-medium"
+              >
+                The easiest tools for your phone. Fast, safe, and simple for everyone.
+              </motion.p>
               
-              <div className="flex flex-col sm:flex-row justify-center items-center gap-6 pt-4">
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.3 }}
+                className="flex flex-col sm:flex-row justify-center items-center gap-6 pt-4"
+              >
                 <PlayStoreButton />
                 <div className="flex flex-col items-center sm:items-start gap-1">
                   <div className="flex items-center gap-1 text-yellow-500">
@@ -70,18 +92,23 @@ export default function Home() {
                   </div>
                   <span className="text-[10px] font-black text-white/40 tracking-widest uppercase">4.9/5 Rating</span>
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             {showcaseImage && (
-              <div className="relative mt-12">
-                <div className="relative">
+              <motion.div 
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, type: "spring", stiffness: 50 }}
+                className="relative mt-12"
+              >
+                <div className="relative group">
                   <Image 
                     src={showcaseImage.imageUrl} 
                     alt="UniTool App Showcase"
                     width={1000}
                     height={600}
-                    className="w-full max-w-4xl mx-auto h-auto drop-shadow-2xl rounded-[2rem] border border-white/10 glass-card p-1.5"
+                    className="w-full max-w-4xl mx-auto h-auto drop-shadow-2xl rounded-[2rem] border border-white/10 glass-card p-1.5 animate-float"
                     priority
                     data-ai-hint={showcaseImage.imageHint}
                   />
@@ -89,7 +116,7 @@ export default function Home() {
                     <PlayStoreButton />
                   </div>
                 </div>
-              </div>
+              </motion.div>
             )}
           </div>
         </section>
@@ -110,10 +137,10 @@ export default function Home() {
                 <span className="font-headline font-bold text-xl text-gradient">UniTool</span>
               </div>
               <p className="text-muted-foreground max-w-xs leading-relaxed text-sm font-medium">
-                The easiest toolbox for your phone. Fast and safe for everyone.
+                The easiest tools for your phone. Fast and safe for everyone.
               </p>
               <div className="pt-2">
-                <a href="https://fazier.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://fazier.com" target="_blank" rel="noopener noreferrer" className="inline-block hover:opacity-80 transition-opacity">
                   <img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=neutral" width={120} alt="Fazier badge" />
                 </a>
               </div>

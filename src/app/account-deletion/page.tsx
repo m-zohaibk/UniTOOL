@@ -1,15 +1,21 @@
+
 import { Layout, ArrowLeft, UserX, Mail } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 
 export default function AccountDeletionPage() {
+  const logoUrl = "https://i.postimg.cc/wTbXkjTg/unnamed.webp";
+
   return (
     <div className="min-h-screen flex flex-col">
       <header className="border-b border-border/50 bg-background/80 backdrop-blur-xl sticky top-0 z-50">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 group">
-            <ArrowLeft className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative w-8 h-8 overflow-hidden rounded-lg">
+              <Image src={logoUrl} alt="UniTool Logo" fill className="object-cover" />
+            </div>
             <span className="font-headline font-bold text-lg">UniTool <span className="text-primary">Support</span></span>
           </Link>
         </div>
@@ -72,7 +78,7 @@ export default function AccountDeletionPage() {
           <div className="pt-10 border-t border-border flex flex-col gap-6">
             <p className="text-sm text-muted-foreground">© 2026 UniTool. All Rights Reserved.</p>
             <Button asChild variant="outline" className="w-fit rounded-xl border-border hover:bg-secondary text-foreground">
-              <Link href="/">Back to Launchpad</Link>
+              <Link href="/">Back to Home</Link>
             </Button>
           </div>
         </div>
