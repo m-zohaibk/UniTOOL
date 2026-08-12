@@ -112,6 +112,11 @@ export default function Home() {
               <p className="text-muted-foreground max-w-xs leading-relaxed text-sm font-medium">
                 The easiest toolbox for your phone. Fast and safe for everyone.
               </p>
+              <div className="pt-2">
+                <a href="https://fazier.com" target="_blank" rel="noopener noreferrer">
+                  <img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=neutral" width={120} alt="Fazier badge" />
+                </a>
+              </div>
             </div>
             
             <div className="space-y-4">
