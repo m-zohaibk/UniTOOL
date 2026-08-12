@@ -139,9 +139,18 @@ export default function Home() {
               <p className="text-muted-foreground max-w-xs leading-relaxed text-sm font-medium">
                 The easiest tools for your phone. Fast and safe for everyone.
               </p>
-              <div className="pt-2">
+              <div className="pt-2 flex flex-wrap items-center gap-4">
                 <a href="https://fazier.com" target="_blank" rel="noopener noreferrer" className="inline-block hover:opacity-80 transition-opacity">
                   <img src="https://fazier.com/api/v1//public/badges/launch_badges.svg?badge_type=launched&theme=neutral" width={120} alt="Fazier badge" />
+                </a>
+                <a href="https://huzzler.so/products/yf31bcrGu4/unitool-all-in-one-app?utm_source=huzzler_product_website&utm_medium=badge&utm_campaign=free_listing" target="_blank" rel="noopener noreferrer" className="inline-block hover:opacity-80 transition-opacity">
+                  <img
+                    alt="Huzzler Embed Badge"
+                    src="https://huzzler.so/assets/images/embeddable-badges/featured.png"
+                    width="159"
+                    height="55"
+                    className="h-10 w-auto"
+                  />
                 </a>
               </div>
             </div>
