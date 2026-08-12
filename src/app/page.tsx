@@ -76,7 +76,7 @@ export default function Home() {
                 transition={{ delay: 0.2 }}
                 className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed font-medium"
               >
-                The easiest tools for your phone. Fast, safe, and simple for everyone.
+                The easiest tools for your phone. Fast and simple for everyone.
               </motion.p>
               
               <motion.div 
