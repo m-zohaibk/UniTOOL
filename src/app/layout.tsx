@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'UniTool: All-in-One Utility App',
-    description: 'The easiest toolbox for your phone. Fast, safe, and simple tools for everyone.',
+    description: 'The easiest toolbox for your phone. Fast and simple tools for everyone.',
     url: baseUrl,
     siteName: 'UniTool',
     images: [
@@ -68,7 +68,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
