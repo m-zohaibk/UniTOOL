@@ -152,6 +152,9 @@ export default function Home() {
                     className="h-10 w-auto"
                   />
                 </a>
+                <a href="https://doforai.tools" target="_blank" rel="noopener noreferrer" className="inline-block hover:opacity-80 transition-opacity">
+                  <img src="https://doforai.tools/badge/feature-badge-white.webp" alt="Featured on doforai.tools" width="172" height="54" className="h-10 w-auto" />
+                </a>
               </div>
             </div>
             
