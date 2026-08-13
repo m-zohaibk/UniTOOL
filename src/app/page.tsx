@@ -76,7 +76,7 @@ export default function Home() {
                 transition={{ delay: 0.2 }}
                 className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed font-medium"
               >
-                The easiest tools for your phone. Fast and simple for everyone.
+                Easy tools for everyone. Fast, safe, and simple.
               </motion.p>
               
               <motion.div 
@@ -154,6 +154,9 @@ export default function Home() {
                 </a>
                 <a href="https://doforai.tools" target="_blank" rel="noopener noreferrer" className="inline-block hover:opacity-80 transition-opacity">
                   <img src="https://doforai.tools/badge/feature-badge-white.webp" alt="Featured on doforai.tools" width="172" height="54" className="h-10 w-auto" />
+                </a>
+                <a href="https://startupbase.io/products/unitool-all-in-one-app?utm_source=startupbase&utm_medium=badge&utm_campaign=launch-badge-light" target="_blank" rel="noopener noreferrer" className="inline-block hover:opacity-80 transition-opacity">
+                  <img src="https://statics.startupbase.io/site/badges/launched-on-sb.svg" alt="Launched on StartupBase" height="55" className="h-10 w-auto" />
                 </a>
               </div>
             </div>
