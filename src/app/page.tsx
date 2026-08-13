@@ -158,6 +158,9 @@ export default function Home() {
                 <a href="https://startupbase.io/products/unitool-all-in-one-app?utm_source=startupbase&utm_medium=badge&utm_campaign=launch-badge-light" target="_blank" rel="noopener noreferrer" className="inline-block hover:opacity-80 transition-opacity">
                   <img src="https://statics.startupbase.io/site/badges/launched-on-sb.svg" alt="Launched on StartupBase" height="55" className="h-10 w-auto" />
                 </a>
+                <a target="_blank" href="https://goodaitools.com/ai/unitool-qzz" className="inline-block hover:opacity-80 transition-opacity">
+                  <img src="https://goodaitools.com/assets/images/badge.png" alt="Good AI Tools" height="54" className="h-10 w-auto" loading="lazy" />
+                </a>
               </div>
             </div>
             
