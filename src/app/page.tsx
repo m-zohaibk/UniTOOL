@@ -76,7 +76,7 @@ export default function Home() {
                 transition={{ delay: 0.2 }}
                 className="text-base text-muted-foreground max-w-2xl mx-auto leading-relaxed font-medium"
               >
-                Easy tools for everyone. Fast, safe, and simple.
+                Easy tools for everyone. Fast and safe.
               </motion.p>
               
               <motion.div 
@@ -171,11 +171,11 @@ export default function Home() {
             </div>
 
             <div className="space-y-4">
-              <h4 className="font-headline font-bold uppercase text-[10px] tracking-[0.3em] text-primary">Store</h4>
-              <div className="space-y-3">
-                <Link href={playStoreUrl} target="_blank" className="block text-xs font-bold text-muted-foreground hover:text-white transition-colors uppercase tracking-widest">Google Play</Link>
-                <p className="text-[10px] text-muted-foreground font-mono">v1.0.0 Stable</p>
-              </div>
+              <h4 className="font-headline font-bold uppercase text-[10px] tracking-[0.3em] text-primary">More</h4>
+              <ul className="space-y-3 text-xs font-bold text-muted-foreground uppercase tracking-widest">
+                <li><Link href={playStoreUrl} target="_blank" className="hover:text-white transition-colors">Store</Link></li>
+                <li><Link href="https://animatephoto.io" target="_blank" className="hover:text-white transition-colors">Animate Photo AI</Link></li>
+              </ul>
             </div>
           </div>
           
