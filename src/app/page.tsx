@@ -161,6 +161,9 @@ export default function Home() {
                 <a target="_blank" href="https://goodaitools.com/ai/unitool-qzz" className="inline-block hover:opacity-80 transition-opacity">
                   <img src="https://goodaitools.com/assets/images/badge.png" alt="Good AI Tools" height="54" className="h-10 w-auto" loading="lazy" />
                 </a>
+                <a href="https://lift-off.sh/p/unitool-all-in-one-app" target="_blank" title="LiftOff launch badge" className="inline-block hover:opacity-80 transition-opacity">
+                  <img src="https://lift-off.sh/images/badges/badgeLaunchedLight.webp" alt="LiftOff launch badge" width="170" height="auto" className="h-10 w-auto" />
+                </a>
               </div>
             </div>
             
